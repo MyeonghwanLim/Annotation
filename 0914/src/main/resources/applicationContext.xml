@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	
+	<context:component-scan base-package="com.lim.biz.board.impl" />
+	<context:component-scan base-package="com.lim.biz.member.impl" />
+	<bean id="gw" class="test.GalaxyWatch" /> <!-- == @Component랑 같다 -->
+	
+	<!--  Map 
+	<bean id="tb" class="test.TestBean">
+		<property name="datas">
+			<map>
+				<entry>
+					<key>
+						<value>아무무</value>
+					</key>
+					<value>서포터</value>
+				</entry>
+				<entry>
+					<key>
+						<value>티모</value>
+					</key>
+					<value>탑</value>
+				</entry>
+				<entry>
+					<key>
+						<value>아리</value>
+					</key>
+					<value>미드</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	       "Set"
+	<bean id="tb" class="test.TestBean">
+		<property name="datas">
+			<set>
+				<value>바나나</value>
+				<value>바나나</value>
+				<value>키위</value>
+			</set>
+		</property>
+	</bean>
+	          "List"
+	<bean id="tb" class="test.TestBean">
+		<property name="datas">
+			<list>
+				<value>서울시</value>
+				<value>강남구</value>
+				<value>행복동</value>
+			</list>
+		</property>
+	</bean> 
+
+
+
+	<bean id="ip" class="test.IPhone" p:watch-ref="aw" p:number="9890" />
+	<bean id="gp" class="test.Galaxy" p:watch-ref="gw" p:bat="60"
+		p:fbat="100" />
+	<bean id="aw" class="test.AppleWatch" />
+	<bean id="gw" class="test.GalaxyWatch" />
+ -->
+</beans>
